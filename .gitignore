@@ -1,0 +1,8 @@
+output/*.jpg
+output/*.pdf
+pdfserve/target
+pdfserve/Cargo.lock
+pdfserve/cert.csr
+pdfserve/cert.pem
+pdfserve/key.pem
+bin/cert.csr

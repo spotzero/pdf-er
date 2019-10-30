@@ -1,0 +1,10 @@
+[package]
+name = "pdfserve"
+version = "0.1.0"
+authors = ["David Pascoe-Deslauriers <dpascoed@coldfrontlabs.ca>"]
+edition = "2018"
+
+[dependencies]
+validator = "0.9.0"
+uuid = { version = "0.7", features = ["v4"] }
+rocket = { version = "0.4.2", features = ["tls"] }
