@@ -57,7 +57,7 @@ Simply made a get request to: ```https://<domain>:<port>/getpdf?url=<URL to prin
 
 ## License
 
-Code including is released under the GPL-3, see LICENSE.txt for details.
+Code included is released under the GPL-3, see LICENSE.txt for details.
 
-Bundles fonts are copyrighted by there respective creators.
+Bundled fonts are copyrighted by their respective creators.
 
