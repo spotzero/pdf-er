@@ -1,7 +1,7 @@
 cpus=$(shell grep -c ^processor /proc/cpuinfo)
 
 all: install
-	docker build . -t spotzero/pdf-it
+	docker build . -t spotzero/pdf-er
 
 install: build
 	cd bin && ../pdfserve/generate_cert.sh
