@@ -51,9 +51,13 @@ This container can run behind an HTTP proxy if the follow environment variables 
 
 ## Using PDF-er
 
-Simply made a get request to: https://<domain>:<port>/getpdf?url=<URL to print>
+Simply made a get request to: ```https://<domain>:<port>/getpdf?url=<URL to print>```
 
 *Examples:* If you container is listening on localhost:8443 and you want a PDF of Github's homepage, make a GET request to: ```https://localhost:8443/getpdf?url=https://github.com/```
 
+## License
 
+Code including is released under the GPL-3, see LICENSE.txt for details.
+
+Bundles fonts are copyrighted by there respective creators.
 
