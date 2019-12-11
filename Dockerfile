@@ -1,6 +1,6 @@
 FROM alpine:edge
 
-RUN echo http://nl.alpinelinux.org/alpine/edge/testing >> /etc/apk/repositories
+RUN apk -U upgrade -a && apk --no-cache update && echo http://nl.alpinelinux.org/alpine/edge/testing >> /etc/apk/repositories
 
 # Install packages for PDF Printing from Firefox
 RUN apk --no-cache add \
@@ -8,7 +8,7 @@ RUN apk --no-cache add \
     cups-pdf \
     cups-client \
     fontconfig \
-    firefox \
+    firefox-esr \
     imagemagick \
     xdotool \
     xvfb \
