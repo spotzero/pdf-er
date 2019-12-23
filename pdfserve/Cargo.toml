@@ -5,6 +5,6 @@ authors = ["David Pascoe-Deslauriers <dpascoed@coldfrontlabs.ca>"]
 edition = "2018"
 
 [dependencies]
-validator = "0.9.0"
-uuid = { version = "0.7", features = ["v4"] }
+validator = "0.10.0"
+uuid = { version = "0.8.1", features = ["v4"] }
 rocket = { version = "0.4.2", features = ["tls"] }

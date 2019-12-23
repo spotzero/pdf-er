@@ -31,7 +31,7 @@ echo "user_pref(\"print.print_to_filename\", \"/output/$PDFNAME.pdf\");" >> "$PR
 
 ## Start Firefox
 firefox -profile "$PROFILE" "$URL" &>/dev/null &
-sleep 5
+sleep 4
 is_dev && import -window root /output/$PDFNAME-1.jpg
 
 if [ ! -z $PROXY_USER ]; then
@@ -46,7 +46,7 @@ if [ ! -z $PROXY_USER ]; then
     xdotool key --clearmodifiers "Return"
  fi
 
-sleep 30
+sleep 20
 is_dev && import -window root /output/$PDFNAME-3.jpg
 
 xdotool  key --clearmodifiers "ctrl+p"
@@ -56,6 +56,6 @@ sleep 1
 xdotool key --clearmodifiers "Tab" key --clearmodifiers "Return"
 is_dev && import -window root /output/$PDFNAME-5.jpg
 
-sleep 10
+sleep 5
 xdotool key --clearmodifiers "ctrl+q"
 is_dev && import -window root /output/$PDFNAME-6.jpg
