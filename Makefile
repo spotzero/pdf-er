@@ -14,4 +14,4 @@ setup:
 	dpkg -l musl || sudo apt install -y musl musl-tools
 	which rustup || curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 	rustup show | grep nightly-x86_64 || rustup toolchain add nightly
-	rustup show | grep x86_64-unknown-linux-musl || rustup target install x86_64-unknown-linux-musl
+	rustup show | grep x86_64-unknown-linux-musl || rustup target install x86_64-unknown-linux-musl --toolchain nightly

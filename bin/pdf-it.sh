@@ -56,6 +56,6 @@ sleep 1
 xdotool key --clearmodifiers "Tab" key --clearmodifiers "Return"
 is_dev && import -window root /output/$PDFNAME-5.jpg
 
-sleep 5
+sleep 10
 xdotool key --clearmodifiers "ctrl+q"
 is_dev && import -window root /output/$PDFNAME-6.jpg

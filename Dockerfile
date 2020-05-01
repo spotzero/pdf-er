@@ -39,7 +39,7 @@ ENV URL="https://github.com/"
 ENV PROXY_USER=""
 ENV PROXY_PASS=""
 ENV PROXY_HOST=""
-
+ENV SSL=0
 
 VOLUME /output
 WORKDIR /output

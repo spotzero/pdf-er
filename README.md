@@ -39,7 +39,11 @@ Running ```make``` will do the following:
 
 ## Running
 
-docker run -p 8443:8443 pdf-it
+### Without SSL
+docker run --rm -p 8080:8080 -e ROCKET_PORT=8080 spotzero/pdf-er
+
+### With SSL
+docker run -p 8443:8443 -e ROCKET_PORT=8443 -e SSL=1 spotzero/pdf-er
 
 ## Use behind an HTTP proxy
 
