@@ -8,7 +8,7 @@ RUN apk --no-cache add \
     cups-pdf \
     cups-client \
     fontconfig \
-    firefox-esr \
+    firefox \
     imagemagick \
     xdotool \
     xvfb \
@@ -21,12 +21,12 @@ RUN apk --no-cache add \
 # Copy in fonts
 RUN mkdir -p /usr/share/fonts
 COPY resources/fonts.tar.gz /usr/share/fonts
-RUN cd /usr/share/fonts && tar -zxf fonts.tar.gz
+RUN cd /usr/share/fonts && tar -zxf fonts.tar.gz && rm fonts.tar.gz
 RUN fc-cache -f && rm -rf /var/cache/*
 
 # Copy in base firefox profile
-RUN mkdir -p /root/firefox/base
-COPY config/firefox/base_profile /root/firefox/base
+RUN mkdir -p /app/firefox/base
+COPY config/firefox/base_profile /app/firefox/base
 
 # Copy in bash scripts to do the printing
 RUN mkdir -p /app/bin

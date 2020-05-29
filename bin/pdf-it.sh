@@ -1,4 +1,5 @@
 #!/bin/bash
+
 if [ -f "/output/$PDFNAME.pdf" ]; then
     rm /output/$PDFNAME.pdf
 fi
@@ -25,8 +26,10 @@ if [ -z $PDFNAME ]; then
     PDFNAME="default"
 fi
 
-PROFILE="/root/firefox/$PDFNAME"
-cp -R /root/firefox/base "$PROFILE"
+PROFILE="/home/$PDFNAME/.mozilla/firefox"
+mkdir -p $PROFILE
+
+cp /app/firefox/base/user.js "$PROFILE"
 echo "user_pref(\"print.print_to_filename\", \"/output/$PDFNAME.pdf\");" >> "$PROFILE/user.js"
 
 ## Start Firefox
@@ -58,4 +61,5 @@ is_dev && import -window root /output/$PDFNAME-5.jpg
 
 sleep 10
 xdotool key --clearmodifiers "ctrl+q"
+xdotool key --clearmodifiers "Return"
 is_dev && import -window root /output/$PDFNAME-6.jpg
