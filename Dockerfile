@@ -8,13 +8,15 @@ RUN apk --no-cache add \
     cups-pdf \
     cups-client \
     fontconfig \
-    firefox \
+    firefox-esr \
     imagemagick \
     xdotool \
     xvfb \
     xvfb-run \
     bash \
+    dbus \
     fontconfig \
+    ttf-freefont \
     tar \
     gzip
 

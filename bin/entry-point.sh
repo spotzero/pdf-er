@@ -14,4 +14,7 @@ for i in $(seq 0 3)
 do
   SCREEN="$SCREEN -screen $i 1280x1024x24"
 done
+
+chmod 777 /output
+
 /app/bin/pdfserve

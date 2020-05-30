@@ -77,13 +77,10 @@ fn getpdf(remoteurl: Option<Form<RemoteURL>>, screens: State<AvailableScreens>) 
 }
 
 fn shutdown(name: String, screen: usize, screens: &AvailableScreens) {
-    /*
-    Command::new("rm")
+    let _status = Command::new("rm")
         .arg("-Rf")
-        .arg(format!("/output/{}", name))
-        .spawn()
-        .unwrap();
-        */
+        .arg(format!("/output/{}*", name))
+        .status();
     release_screen(screen, &screens);
 }
 
