@@ -3,6 +3,9 @@ cpus=$(shell grep -c ^processor /proc/cpuinfo)
 all: install
 	podman build -t docker.io/spotzero/pdf-er:latest .
 
+podman-push:
+	podman push docker.io/spotzero/pdf-er:latest
+
 docker:
 	docker build . -t spotzero/pdf-er
 
