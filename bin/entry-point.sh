@@ -17,4 +17,6 @@ done
 
 chmod 777 /output
 
-/app/bin/pdfserve
+ROCKET_LOG="debug"
+
+(cd /app/bin && /app/bin/pdfserve)

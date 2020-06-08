@@ -41,6 +41,7 @@ fn getpdf(
         if validator::validate_url(&remoteurl.url) {
             let name = Uuid::new_v4().to_string();
             let pdf_path = format!("/output/{}.pdf", name);
+            println!("Generating PDF for {} with profile {}", remoteurl.url, name);
             let pdf_status = Command::new("/app/bin/generate-pdf.sh")
                 //.env("DEV", "1")
                 .env("URL", &remoteurl.url)
