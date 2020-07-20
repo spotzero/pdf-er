@@ -8,7 +8,7 @@ RUN apk --no-cache add \
     cups-pdf \
     cups-client \
     fontconfig \
-    firefox-esr \
+    firefox \
     imagemagick \
     xdotool \
     xvfb \
