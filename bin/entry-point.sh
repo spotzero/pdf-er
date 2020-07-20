@@ -1,5 +1,7 @@
 #!/bin/bash
 
+/app/bin/generate_cert.sh
+
 if [ -z $ROCKET_PORT ]; then
   ROCKET_PORT=8443
 fi

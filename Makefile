@@ -10,7 +10,6 @@ docker:
 	docker build . -t spotzero/pdf-er
 
 install: build
-	cd bin && ../pdfserve/generate_cert.sh
 	cp pdfserve/target/x86_64-unknown-linux-musl/release/pdfserve bin
 
 build: setup
