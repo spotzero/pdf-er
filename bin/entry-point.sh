@@ -8,7 +8,7 @@ fi
 
 if [ "$SSL" -ne "0" ]; then
   ROCKET_TLS='{certs="/app/bin/cert.pem",key="/app/bin/key.pem"}'
-fi 
+fi
 
 
 SCREEN=""

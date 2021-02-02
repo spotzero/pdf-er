@@ -30,7 +30,7 @@ PROFILE="/home/$PDFNAME/.mozilla/firefox"
 mkdir -p $PROFILE
 
 cp /app/firefox/base/user.js "$PROFILE"
-echo "user_pref(\"print.print_to_filename\", \"/output/$PDFNAME.pdf\");" >> "$PROFILE/user.js"
+echo "user_pref(\"print.printer_Print_to_File.print_to_filename\", \"/output/$PDFNAME.pdf\");" >> "$PROFILE/prefs.js"
 
 ## Start Firefox
 firefox -profile "$PROFILE" "$URL" &>/dev/null &
@@ -53,8 +53,8 @@ sleep 20
 is_dev && import -window root /output/$PDFNAME-3.jpg
 
 xdotool  key --clearmodifiers "ctrl+p"
-is_dev && import -window root /output/$PDFNAME-4.jpg
 sleep 1
+is_dev && import -window root /output/$PDFNAME-4.jpg
 
 xdotool key --clearmodifiers "Tab" key --clearmodifiers "Return"
 is_dev && import -window root /output/$PDFNAME-5.jpg
