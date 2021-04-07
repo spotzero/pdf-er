@@ -84,6 +84,11 @@ fn getpdf(
     }
 }
 
+#[get("/status")]
+fn status() -> String {
+    "Ok".into()
+}
+
 fn shutdown(name: String, screen: usize, screens: &AvailableScreens) {
     let _ = fs::remove_file(format!("/output/{}.pdf", name));
     release_screen(screen, &screens);
@@ -116,7 +121,7 @@ fn release_screen(screen: usize, screens: &AvailableScreens) {
 
 fn main() {
     rocket::ignite()
-        .mount("/", routes![getpdf])
+        .mount("/", routes![getpdf, status])
         .manage(AvailableScreens {
             screens: Mutex::new(vec![false; 1]),
         })
