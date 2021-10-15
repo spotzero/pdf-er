@@ -56,10 +56,21 @@ xdotool  key --clearmodifiers "ctrl+p"
 sleep 1
 is_dev && import -window root /output/$PDFNAME-4.jpg
 
-xdotool key --clearmodifiers "Tab" key --clearmodifiers "Return"
+xdotool key --clearmodifiers "Tab" \
+        key --clearmodifiers "Tab" \
+        key --clearmodifiers "Tab" \
+        key --clearmodifiers "Tab" \
+        key --clearmodifiers "Return"
+
 is_dev && import -window root /output/$PDFNAME-5.jpg
+
+
+xdotool key --clearmodifiers "Tab" \
+        key --clearmodifiers "Return"
+
+is_dev && import -window root /output/$PDFNAME-6.jpg
 
 sleep 10
 xdotool key --clearmodifiers "ctrl+q"
 xdotool key --clearmodifiers "Return"
-is_dev && import -window root /output/$PDFNAME-6.jpg
+is_dev && import -window root /output/$PDFNAME-7.jpg
